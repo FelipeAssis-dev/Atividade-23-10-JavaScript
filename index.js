@@ -4,6 +4,10 @@ let carroAtual = 0;
 let idSlideShow;
 document.getElementById("imgCarro").addEventListener("mouseenter", pauseSlideShow); 
 document.getElementById("imgCarro").addEventListener("mouseout", playSlideShow);
+
+document.getElementById("tempo").addEventListener("change", function(){
+    alert(document.getElementById("tempo").value);
+})
 function exibirCarro(){
     document.getElementById("imgCarro").src = `img/${carros[carroAtual].src}`
     document.getElementById("nome").innerHTML = carros[carroAtual].nome
